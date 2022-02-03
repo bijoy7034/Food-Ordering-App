@@ -26,7 +26,7 @@
               <a class="nav-link" href="#">CATAGORY</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">ORDERS</a>
+                <a class="nav-link" href="adminOders.php">ORDERS</a>
               </li>
           </ul>
           <span class="navbar-text">

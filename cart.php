@@ -1,3 +1,22 @@
+<?php
+
+include 'conn.php';
+if(isset($_POST['submit'])){
+  $fullname = $_POST['fullname'];
+  $mobile = $_POST['mobile'];
+  $email = $_POST['email'];
+  $address = $_POST['address'];
+  $payment = $_POST['payment'];
+
+  $sql = "INSERT INTO `order_details`(`fullname`, `mobile`, `email`, `address`, `payment`) VALUES ('$fullname',$mobile,'$email','$address','$payment')";
+  $result = mysqli_query($conn,$sql);
+}
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +28,14 @@
 </head>
 <body  style="background-image: url('pics/home-bg.jpg');">
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #ffae00;"> 
-        <a class="navbar-brand" style="color: #ffffff;; font-size: 24px;" href="#"><b> AMGO <span style="color: black;">Foods</span>  </b></a>
+        <a class="navbar-brand" style="color: #ffffff;; font-size: 24px;" href="#"><b> AMGO <img style="width: 50px;" src="pics/cart.png" alt="" ><span style="color: black;">Foods </span>   </b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav justify-content-center mr-auto ">
             <li class="nav-item active" style="margin-left: 330%;">
-              <a class="nav-link" style="color: blanchedalmond;"  href="#"> <b>CART</b> <span class="sr-only">(current)</span></a>
+              <a class="nav-link" style="color: blanchedalmond;"  href="#"> <b>Cart</b> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="admin.php">Admin</a>
@@ -25,7 +44,7 @@
               <a class="nav-link" href="#">Catagory</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php">HOME</a>
+                <a class="nav-link" href="index.php">Home</a>
               </li>
           </ul>
           <span class="navbar-text">
@@ -38,7 +57,7 @@
 
       <div class="container">
         <br><br><br><br>
-        <center style="color: #ffae00;; font-size: 34px;" href="#"><b> FOOD <span style="color: black;"> CART</span>  </b></center><br><br>
+        <center style="color: #ffae00;; font-size: 34px;" href="#"><b> FOOD <img style="width: 50px;" src="pics/cart (2).png" alt="" > <span style="color: black;"> CART</span>  </b></center><br><br>
 
         <table class="table">
   <thead>
@@ -67,7 +86,7 @@
            
            $sum = ($qun * $price)+$sum;
            echo '<tr>
-           <th scope="row">'.$name.'</th>
+           <th scope="row">  ' .$name. '</th>
            <td>'.$price.'</td>
            <td>'.$qun.'</td>
            <td><button class="btn btn-secondary btn-sm"><a class="text-light" style="text-decoration:none;" href="addQun.php?id='.$id.'&qun='.$qun.'">+</a></button>
@@ -76,6 +95,9 @@
           
          </tr>';
        }
+   }else {
+    echo '<tr>
+    <th scope="row">CART IS EMPTY</th></tr>';
    }
    
    ?>
@@ -86,36 +108,41 @@
 
 
  <button type="button" style="background-color: orange;" class="btn btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal"><a style="color: white;" href="#">PROCEED ORDER</a></button>
-<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+ <div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div style="background-image: url('pics/home-bg.jpg');" class="modal-dialog">
-  <form action="" class="form-floating"></form>  
+ 
+  <form action="cart.php" method="POST" class="form-floating">
+
+
   <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">ORDER DETAILS</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">&#xD7</button>
       </div>
       <div class="modal-body">
         
       <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Fullname</label>
-         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         <input type="text" class="form-control" id="exampleInputEmail1" name="fullname">
        </div>
        <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Mobile</label>
-         <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mobile">
        </div>
       <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">Email address</label>
-         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        <div id="emailHelp" class="form-text">You can track oder witj the email</div>
        </div>
       <div class="form-floating">
       <label for="floatingInput"> Address</label>
-      <textarea class="form-control" placeholder="Address" id="floatingTextarea2" style="height: 100px"></textarea>
+      <textarea class="form-control" placeholder="Address" id="floatingTextarea2" style="height: 100px" name="address"></textarea>
        </div>
        <div class="form-group col-md-6">
       <label for="inputState">Payment</label>
-      <select id="inputState" name="veg" class="form-control">
+      <select id="inputState" name="payment" class="form-control" >
         <option selected>Choose...</option>
         <option>COD</option>
         <option>UPI</option>
@@ -129,12 +156,13 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" style="background-color: orange; color:white;" class="btn">ORDER NOW</button>
+        <button type="submit" style="background-color: orange; color:white;" name="submit" class="btn">PLACE OLDER</button>
       </div>
     </div>
     </form>
   </div>
 </div>
+
 
 
 
@@ -148,8 +176,6 @@
       <br><br>
 
 
-
-     
 
 
       <?php include "footer.php" ?>

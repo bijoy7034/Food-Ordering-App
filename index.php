@@ -89,7 +89,8 @@
               <img class="card-img-top" src="pics/<?php echo $image ?>" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $name ?></h5>
-                <p class="card-text"><?php echo $discription ?></p><br>
+                <p class="card-text"><?php echo $discription ?></p>
+                <span ><a href="" style="color: #ffae00;">&#9733; &#9733; &#9733; &#9733; &#9734;</a></span>
                 <p class="h3">&#8377 <?php echo $price ?>.0/-</p><br>
                 <a href="addcart.php?itemid=<?php echo $id ?>&name=<?php echo $name ?>&price=<?php echo $price ?>&qun=<?php echo $qun ?>" class="btn btn" style="background-color:#ffae00; color:#ffffff">ADD TO CART</a>
               </div>
@@ -104,8 +105,59 @@
 
       
       ?> </div>
-      <br>
+      
+      <div class="card text-white">
+  <img src="pics/3a.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">AMGO ONLINE FOOD</h5>
+    <p class="card-text">LArabian food near me . BBQ food near me . Bakery food near me . Beverages food near me . Biryani food near me . Burger food near me . <br> Cafe food near me . Chinese food near me . Continental food near me . Desserts food near me  . Ice Cream food near me</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+<br>
+<br><br>
+<center style="color: #ffae00;; font-size: 38px;" href="#"><b> FOOD <span style="color: black;">REVIEWS</span>  </b></center>
+<br>
 
+
+
+<div class="container my-3">
+<div class="row">
+  <div class="col-sm-6">
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="pics/pic1.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h6 class="card-title">The Best at Taste and Quality</h6>
+        <p class="card-text">The Food we had enjoyed at the time of dinner. It was really delicious taste with great quality.</p>
+        <p class="card-text"><small class="text-muted">Last updated 60 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="pics/pic4.jpeg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h6 class="card-title">Great Burgers</h6>
+        <p class="card-text">I was on vacation and to help celebrate national cheeseburger day, I stopped at Amgo, Excellent food & service!</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+</div>
 <?php include "footer.php" ?>
 
 
