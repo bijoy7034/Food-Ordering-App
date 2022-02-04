@@ -36,7 +36,7 @@
 
       <div class="container">
         <br><br><br><br>
-        <center style="color: #ffae00;; font-size: 34px;" href="#"><b> CURRENT<span style="color: black;"> ODERS</span>  </b></center><br><br>
+        <center style="color: #ffae00;; font-size: 34px;" href="#"><b> CURRENT<span style="color: black;"> ORDERS</span>  </b></center><br><br>
 
         <table class="table">
   <thead>
@@ -70,7 +70,7 @@
            <td>'.$email.'</td>
            <td>'.$address.'</td>
            <td>'.$payment.'</td>
-           <td><button class="btn btn-primary btn-sm"><a class="text-light" style="text-decoration:none;" href="viewOdre.php?id='.$mobile.'">VIEW</a></button>
+           <td><button class="btn btn-primary btn-sm"><a class="text-light" style="text-decoration:none;" href="viewOdrer.php?id='.$mobile.'">VIEW</a></button>
            <button class="btn btn-success btn-sm"><a class="text-light"  style="text-decoration:none;" href="oderDel.php?deleteid='.$mobile.'">ODER DELIVERED</a></button></td>
           
          </tr>';

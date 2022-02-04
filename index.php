@@ -24,14 +24,14 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="pics/3a.jpg" alt="First slide">
+            <img class="d-block w-100" src="pics/2a.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5>The food at your doorstep</h5>
                 <p>Amgo provides services in web as well as mobile application. Awesome food that you can eat everyday.</p>
               </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="pics/2a.jpg" alt="Second slide">
+            <img class="d-block w-100" src="pics/3a.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h5>The food at your doorstep</h5>
                 <p>Amgo provides services in web as well as mobile application. Awesome food that you can eat everyday.</p>
@@ -85,7 +85,7 @@
          
 
 
-          <div class="card my-5 mr-5 ml-5" style="width: 25rem;">
+          <div class="card my-5 mr-5 ml-5 rounded" style="width: 25rem;">
               <img class="card-img-top" src="pics/<?php echo $image ?>" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title"><?php echo $name ?></h5>
@@ -111,7 +111,7 @@
   <div class="card-img-overlay">
     <h5 class="card-title">AMGO ONLINE FOOD</h5>
     <p class="card-text">LArabian food near me . BBQ food near me . Bakery food near me . Beverages food near me . Biryani food near me . Burger food near me . <br> Cafe food near me . Chinese food near me . Continental food near me . Desserts food near me  . Ice Cream food near me</p>
-    <p class="card-text">Last updated 3 mins ago</p>
+    <p class="card-text">Last updated 50 mins ago</p>
   </div>
 </div>
 <br>
