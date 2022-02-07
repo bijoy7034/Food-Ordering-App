@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pics/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
 </head>
@@ -70,7 +71,7 @@
            <td>'.$email.'</td>
            <td>'.$address.'</td>
            <td>'.$payment.'</td>
-           <td><button class="btn btn-primary btn-sm"><a class="text-light" style="text-decoration:none;" href="viewOdrer.php?id='.$mobile.'">VIEW</a></button>
+           <td>
            <button class="btn btn-success btn-sm"><a class="text-light"  style="text-decoration:none;" href="oderDel.php?deleteid='.$mobile.'">ODER DELIVERED</a></button></td>
           
          </tr>';
@@ -82,6 +83,7 @@
 </table>
       </div>
 
+      <!-- <button class="btn btn-primary btn-sm"><a class="text-light" style="text-decoration:none;" href="viewOdrer.php?id='.$mobile.'">VIEW</a></button> -->
 
 
       <?php include 'footer.php' ?>
