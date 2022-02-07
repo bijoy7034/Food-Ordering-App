@@ -91,9 +91,9 @@ if(isset($_POST['submit'])){
            <th scope="row">  ' .$name. '</th>
            <td>'.$price.'</td>
            <td>'.$qun.'</td>
-           <td><button style="background-color:orange;" class="btn btn btn-sm"><a class="text-light" style="text-decoration:none;" href="addQun.php?id='.$id.'&qun='.$qun.'">+</a></button>
-           <button style="background-color:orange;" class="btn btn btn-sm"><a class="text-light"  style="text-decoration:none;" href="minusQun.php?id='.$id.'&qun='.$qun.'">-</a></button>
-           <button class="btn btn-danger btn-sm"><a class="text-light"  style="text-decoration:none;" href="cartDel.php?deleteid='.$id.'">DELETE</a></button></td>
+           <td><button style="background-color:orange;" class="btn btn ml-2 btn-sm"><a class="text-light" style="text-decoration:none;" href="addQun.php?id='.$id.'&qun='.$qun.'">+</a></button>
+           <button style="background-color:orange;" class="btn btn btn-sm ml-2"><a class="text-light"  style="text-decoration:none;" href="minusQun.php?id='.$id.'&qun='.$qun.'">-</a></button>
+           <button class="btn btn-danger btn-sm my-3 ml-2"><a class="text-light"  style="text-decoration:none;" href="cartDel.php?deleteid='.$id.'">DELETE</a></button></td>
           
          </tr>';
        }

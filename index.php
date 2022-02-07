@@ -147,7 +147,7 @@
     <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="pics/pic4.jpeg" class="img-fluid rounded-start" alt="...">
+      <img src="pics/pic4.png" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
