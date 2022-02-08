@@ -114,7 +114,7 @@
   <img src="pics/3a.jpg" class="card-img" alt="...">
   <div class="card-img-overlay">
     <h5 class="card-title">AMGO ONLINE FOOD</h5>
-    <p class="card-text">LArabian food near me . BBQ food near me . Bakery food near me . Beverages food near me . Biryani food near me . Burger food near me . <br> Cafe food near me . Chinese food near me . Continental food near me . Desserts food near me  . Ice Cream food near me</p>
+    <p class="card-text">Arabian food near me . BBQ food near me . Bakery food near me . Beverages food near me . Biryani food near me . Burger food near me . <br> Cafe food near me . Chinese food near me . Continental food near me . Desserts food near me  . Ice Cream food near me</p>
     <p class="card-text">Last updated 50 mins ago</p>
   </div>
 </div>
@@ -125,7 +125,7 @@
 
 
 
-<div class="container my-3">
+<div class="container my-5">
 <div class="row">
   <div class="col-sm-6">
   <div class="card mb-3" style="max-width: 540px;">
